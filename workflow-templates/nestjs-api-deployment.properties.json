@@ -1,13 +1,8 @@
 {
-    "name": "Octo Organization Workflow",
-    "description": "Octo Organization CI workflow template.",
+    "name": "NestJS API deployment (K8s, skaffold, aws)",
+    "description": "Deploy your nestjs api to aws with skaffold and kubectl",
     "iconName": "example-icon",
     "categories": [
-        "Go"
-    ],
-    "filePatterns": [
-        "package.json$",
-        "^Dockerfile",
-        ".*\\.md$"
+        "nodejs"
     ]
 }

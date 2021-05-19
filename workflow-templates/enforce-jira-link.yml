@@ -11,12 +11,14 @@ jobs:
 
     steps:
       - name: Check for ticket
+        env:
+          JIRA_DOMAIN: ${{ secrets.JIRA_DOMAIN }}
         uses: neofinancial/ticket-check-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ticketLink: ${{ secrets.JIRA_TICKET_LINK }}
+          ticketLink: ${{ secrets.JIRA_DOMAIN }}
           ticketPrefix: 'ND-'
           titleRegex: '^ND-(?<ticketNumber>\d+)'
           branchRegex: '^ND-(?<ticketNumber>\d+)'
           bodyRegex: 'ND-(?<ticketNumber>\d+)'
-          bodyURLRegex: 'http(s?):\/\/(bglabs.atlassian.net)(\/browse)\/(ND\-)(?<ticketNumber>\d+)'
+          bodyURLRegex: 'http(s?):\/\/($JIRA_DOMAIN)(\/browse)\/(ND\-)(?<ticketNumber>\d+)'

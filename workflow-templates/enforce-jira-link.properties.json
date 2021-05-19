@@ -1,0 +1,8 @@
+{
+  "name": "Link jira story",
+  "description": "Link jira story to the PR",
+  "iconName": "example-icon",
+  "categories": [
+      "nodejs"
+  ]
+}

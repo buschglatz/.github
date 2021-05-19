@@ -14,7 +14,7 @@ jobs:
         uses: neofinancial/ticket-check-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ticketLink: 'https://bglabs.atlassian.net/browse/ND-%ticketNumber%'
+          ticketLink: ${{ secrets.JIRA_TICKET_LINK }}
           ticketPrefix: 'ND-'
           titleRegex: '^ND-(?<ticketNumber>\d+)'
           branchRegex: '^ND-(?<ticketNumber>\d+)'

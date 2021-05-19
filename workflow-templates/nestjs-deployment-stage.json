@@ -1,0 +1,8 @@
+{
+  "name": "NestJS deployment to staging",
+  "description": "Deploy your nestjs api to aws with skaffold and kubectl",
+  "iconName": "example-icon",
+  "categories": [
+      "nodejs"
+  ]
+}

@@ -1,4 +1,4 @@
-name: NestJS API deployment
+name: NestJS deployment to dev
 
 on:
   push:

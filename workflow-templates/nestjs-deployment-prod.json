@@ -1,5 +1,5 @@
 {
-    "name": "NestJS API deployment (K8s, skaffold, aws)",
+    "name": "NestJS deployment to production",
     "description": "Deploy your nestjs api to aws with skaffold and kubectl",
     "iconName": "example-icon",
     "categories": [

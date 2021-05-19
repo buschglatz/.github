@@ -5,21 +5,16 @@ on:
     types: [ published ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          npm ci
-          npm run gen
-          npm run build
   deploy:
     environment: staging
-
-    needs: [build]
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
+
+      - run: npm ci
+      - run: npm run gen
+      - run: npm run test
+      - run: npm run build
 
       - name: Install kubectl
         uses: azure/setup-kubectl@v1

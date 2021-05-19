@@ -1,0 +1,8 @@
+{
+  "name": "Build Lint Test NodeJs",
+  "description": "Build lint and test nodejs pull requests",
+  "iconName": "example-icon",
+  "categories": [
+      "nodejs"
+  ]
+}

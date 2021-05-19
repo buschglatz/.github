@@ -1,13 +1,20 @@
-name: NestJS API deployment
+name: NestJS deployment production
 
 on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+  workflow_dispatch:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          npm ci
+          npm run gen
+          npm run build
+  deploy:
+    environment: production
+
+    needs: [build]
     runs-on: ubuntu-latest
 
     steps:
